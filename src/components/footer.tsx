@@ -1,9 +1,10 @@
-import { Footer } from "antd/es/layout/layout";
+import React from 'react';
+import { Footer } from 'antd/es/layout/layout';
 
 const AppFooter = () => {
   return (
-    <div>
-      <Footer>
+    <>
+      <Footer className="">
         <div className="mx-auto h-max flex">
           <div className="basis-1/2">
             <h2 className="text-2xl">Address: </h2>
@@ -21,7 +22,7 @@ const AppFooter = () => {
         </div>
         <div className="text-thin">@no copyright</div>
       </Footer>
-    </div>
+    </>
   );
 };
 

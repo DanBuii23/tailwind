@@ -1,21 +1,19 @@
-import { Button, Form, Input } from "antd";
+import { useParams } from 'react-router-dom';
+import PhoneContent from './contentPhone';
+import LapTopContent from './contentLaptop';
+import AccessoriesContent from './contentAccessories';
+import React from 'react';
+import KeyboardContent from './contentKeyboard';
 
-const AppContent = () => {
+export function Content() {
+  const { category } = useParams<{ category: string }>();
+
   return (
-    <div className="container p-20">
-      <Form>
-        <Form.Item label="Tài khoản">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Mật khẩu">
-          <Input />
-        </Form.Item>
-        <Form.Item>
-          <Button type="default">Đăng nhập</Button>
-        </Form.Item>
-      </Form>
+    <div className="p-4 flex-1">
+      {category === 'phones' && <PhoneContent />}
+      {category === 'laptops' && <LapTopContent />}
+      {category === 'accessories' && <AccessoriesContent />}
+      {category === 'keyboards' && <KeyboardContent />}
     </div>
   );
-};
-
-export default AppContent;
+}

@@ -1,4 +1,5 @@
-import { Button, Layout } from "antd";
+import React from 'react';
+import { Button, Layout } from 'antd';
 
 const { Header } = Layout;
 
@@ -8,10 +9,13 @@ const AppHeader = () => {
       {/* Logo */}
 
       <div className="basis-1/2 flex gap-10 justify-center">
-        <h2 className="font-black text-white items-center">App Header</h2>
+        <h2 className="font-black text-white text-2xl items-center">
+          App Header
+        </h2>
       </div>
       <div className="basis-1/2 flex gap-10 items-center">
         <h3 className="font-bold text-white">Home</h3>
+        <h3 className="font-bold text-white">Product</h3>
         <h3 className="font-bold text-white">About</h3>
         <h3 className="font-bold text-white">Contact</h3>
         <div className="font-bold text-white">
